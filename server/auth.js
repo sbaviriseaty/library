@@ -44,6 +44,10 @@ async function setAuthClient() {
         'https://www.googleapis.com/auth/datastore'
       ])
     }
+
+    var user = GoogleAuth.currentUser.getAuthResponse().id_token
+    console.log(user)
+
     google.options({auth: authClient})
     log.info('Google API auth successfully retrieved.')
 
