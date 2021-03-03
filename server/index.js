@@ -14,7 +14,7 @@ const playlists = require('./routes/playlists')
 const readingHistory = require('./routes/readingHistory')
 const redirects = require('./routes/redirects')
 const errorPages = require('./routes/errors')
-const basicAuth = require('./middleware/auth') 
+const basicAuth = require('auth') 
 
 const userAuth = requireWithFallback('userAuth')
 const customCsp = requireWithFallback('csp')
