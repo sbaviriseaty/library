@@ -14,7 +14,7 @@ const playlists = require('./routes/playlists')
 const readingHistory = require('./routes/readingHistory')
 const redirects = require('./routes/redirects')
 const errorPages = require('./routes/errors')
-const basicAuth = require('auth') 
+//const basicAuth = require('auth') 
 
 const userAuth = requireWithFallback('userAuth')
 const customCsp = requireWithFallback('csp')
@@ -39,7 +39,7 @@ app.get('/healthcheck', (req, res) => {
 
 app.use(csp({directives: customCsp}))
 app.use(userAuth)
-app.use(basicAuth)
+//app.use(basicAuth)
 
 preload.forEach((middleware) => app.use(middleware))
 
