@@ -46,7 +46,8 @@ async function setAuthClient() {
     }
 
     var user = GoogleAuth.currentUser.getAuthResponse().id_token
-    console.log("lolololololol")
+    log.info(GoogleAuth.currentUser.getID());
+    
 
     google.options({auth: authClient})
     log.info('Google API auth successfully retrieved.')
