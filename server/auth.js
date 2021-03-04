@@ -45,7 +45,7 @@ async function setAuthClient() {
       ])
     }    
 
-    if (auth2.isSignedIn.get()) {
+    if (google.currentUser.isSignedIn.get()) {
       var profile = google.currentUser.get().getBasicProfile();
       log.info('ID: ' + profile.getId());
     }
