@@ -45,6 +45,11 @@ async function setAuthClient() {
       ])
     }    
 
+    if (auth2.isSignedIn.get()) {
+      var profile = auth2.currentUser.get().getBasicProfile();
+      log.info('ID: ' + profile.getId());
+    }
+
     google.options({auth: authClient})
     log.info('Google API auth successfully retrieved.')
 
