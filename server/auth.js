@@ -43,11 +43,11 @@ async function setAuthClient() {
         'https://www.googleapis.com/auth/cloud-platform',
         'https://www.googleapis.com/auth/datastore'
       ])
-    }    
-
-    if (google.currentUser.isSignedIn.get()) {
-      var profile = google.currentUser.get().getBasicProfile();
-      log.info('ID: ' + profile.getId());
+    }
+    
+    if (authClient.isSignedIn.get()) {
+      var profile = auththClient.currentUser.get().getBasicProfile()
+      log.info(profile)
     }
 
     google.options({auth: authClient})
