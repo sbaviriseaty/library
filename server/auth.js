@@ -45,12 +45,15 @@ async function setAuthClient() {
       ])
     }
     
+   
+
+    google.options({auth: authClient})
+    
     if (authClient.isSignedIn.get()) {
       var profile = auththClient.currentUser.get().getBasicProfile()
       log.info(profile)
     }
-
-    google.options({auth: authClient})
+    
     log.info('Google API auth successfully retrieved.')
 
     return authClient
